@@ -1,10 +1,10 @@
+[![DOI](https://zenodo.org/badge/1152618335.svg)](https://doi.org/10.5281/zenodo.18522926)
+
 # NYCU Campus 3D Buildings Dataset
 
 Comprehensive 3D building dataset for 5 NYCU campuses (~7,836 buildings) combining NLSC 3D models and OpenStreetMap data.
 
 陽明交大 5 校區約 7,836 棟建築的 3D 空間資料集，結合國土測繪中心 3D 模型與 OpenStreetMap 資料。
-
----
 
 ## Dataset Overview
 
@@ -30,8 +30,6 @@ Comprehensive 3D building dataset for 5 NYCU campuses (~7,836 buildings) combini
 - name (Chinese), name:en (English)
 - building type
 - geometry
-
----
 
 ## Quick Start
 
@@ -65,8 +63,6 @@ top_10 = named.nlargest(10, 'nlsc_BUILD_H')
 print(top_10[['name', 'nlsc_BUILD_H', 'nlsc_BUILD_STR']])
 ```
 
----
-
 ## Repository Structure
 
 ```
@@ -85,8 +81,6 @@ NYCU-Campus-3D-Buildings/
 ├── examples/             # Jupyter notebooks
 └── docs/                 # Documentation
 ```
-
----
 
 ## Data Sources and Licenses
 
@@ -142,8 +136,6 @@ Campus maps courtesy of National Yang Ming Chiao Tung University
 2. OpenStreetMap contributors (ODbL 1.0)
 3. NYCU-Campus-3D-Buildings project (CC BY 4.0)
 
----
-
 ## Examples
 
 See `examples/` directory for Jupyter notebooks:
@@ -151,8 +143,6 @@ See `examples/` directory for Jupyter notebooks:
 1. **01_basic_usage.ipynb**: Load, filter, export
 2. **02_data_analysis.ipynb**: Height distribution, structure analysis
 3. **03_visualization.ipynb**: Interactive maps, heatmaps
-
----
 
 ## Citation
 
@@ -169,8 +159,6 @@ See `CITATION.cff` for standard citation format.
 }
 ```
 
----
-
 ## Contributing
 
 See `CONTRIBUTING.md` for guidelines.
@@ -178,28 +166,13 @@ See `CONTRIBUTING.md` for guidelines.
 - **Issues**: [GitHub Issues](https://github.com/thc1006/NYCU-Campus-3D-Buildings/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/thc1006/NYCU-Campus-3D-Buildings/discussions)
 
----
-
 ## Maintainer
 
 **Hsiu-Chi Tsai (thc1006) / 蔡秀吉**
-Email: hctsai@linux.com
-Affiliation: National Yang Ming Chiao Tung University (國立陽明交通大學)
+- Email: hctsai@linux.com
+- Affiliation: National Yang Ming Chiao Tung University (國立陽明交通大學)
 
----
-
-## Changelog
-
-### v1.0.0 (2026-02-08)
-
-- Initial release
-- 5 campuses, ~7,836 buildings
-- 20 NLSC attributes + OSM names
-- 3 example Jupyter notebooks
-- Interactive 3D viewer
-
----
-
-**License**: Mixed (CC BY 4.0 + ODbL 1.0) - See LICENSE for details
+### **License**
+- Mixed (CC BY 4.0 + ODbL 1.0) - See LICENSE for details
 **Version**: 1.0.0
 **Last Updated**: 2026-02-08
