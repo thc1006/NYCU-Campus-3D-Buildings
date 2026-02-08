@@ -320,3 +320,6 @@ data/output/archive/**/*.html
 # ===============================================================================
 # Release archives (upload to GitHub Releases)
 releases/
+
+# Local archive scripts (not tracked)
+scripts/local_archive/
