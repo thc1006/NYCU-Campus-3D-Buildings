@@ -1,0 +1,50 @@
+{
+  "campus": "yangming",
+  "campus_name": "陽明校區 (Yangming Campus)",
+  "layer": "109_A",
+  "bbox": {
+    "lon_min": 121.508,
+    "lon_max": 121.525,
+    "lat_min": 25.112,
+    "lat_max": 25.128
+  },
+  "tiles": [
+    {
+      "campus": "yangming",
+      "level": 5,
+      "row": 12,
+      "col": 23,
+      "size": 307
+    },
+    {
+      "campus": "yangming",
+      "level": 5,
+      "row": 13,
+      "col": 23,
+      "size": 22410
+    },
+    {
+      "campus": "yangming",
+      "level": 5,
+      "row": 14,
+      "col": 23,
+      "size": 35380
+    },
+    {
+      "campus": "yangming",
+      "level": 6,
+      "row": 26,
+      "col": 47,
+      "size": 5724
+    },
+    {
+      "campus": "yangming",
+      "level": 6,
+      "row": 27,
+      "col": 47,
+      "size": 1093
+    }
+  ],
+  "total_tiles": 5,
+  "total_bytes": 64914
+}

@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  data-organizer:
+    build:
+      context: .
+      dockerfile: Dockerfile.organizer
+    container_name: nqsd-data-organizer
+    volumes:
+      - ./raw:/data/raw
+      - ./processed:/data/processed
+      - ./output:/data/output
+      - ./floor_plans:/data/floor_plans
+      - ./scripts:/scripts
+      - ./backup:/data/backup
+      # ymmap_archive 只讀掛載（確保不會被修改）
+      - ./ymmap_archive:/data/ymmap_archive:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=Asia/Taipei
+    command: python /scripts/organize_data.py
+
+  data-validator:
+    build:
+      context: .
+      dockerfile: Dockerfile.organizer
+    container_name: nqsd-data-validator
+    volumes:
+      - ./raw:/data/raw:ro
+      - ./processed:/data/processed:ro
+      - ./output:/data/output:ro
+      - ./floor_plans:/data/floor_plans:ro
+      - ./scripts:/scripts:ro
+      - ./ymmap_archive:/data/ymmap_archive:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=Asia/Taipei
+    command: python /scripts/validate_organization.py
+
+  backup-creator:
+    build:
+      context: .
+      dockerfile: Dockerfile.organizer
+    container_name: nqsd-backup-creator
+    volumes:
+      - ./:/data
+      - ./scripts:/scripts:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=Asia/Taipei
+    command: python /scripts/backup_data.py

@@ -1,0 +1,38 @@
+{
+  "directory": "output/latest",
+  "description": "最新版本的可視化和分析結果",
+  "version": "v1_2026-02-07",
+  "generated_date": "2026-02-08",
+  "files": {
+    "buildings_merged.geojson": {
+      "format": "GeoJSON",
+      "features": 2309,
+      "description": "合併的完整建築數據"
+    },
+    "buildings_3d.geojson": {
+      "format": "GeoJSON",
+      "description": "3D 建築數據"
+    },
+    "buildings_3d.html": {
+      "format": "HTML",
+      "description": "3D 互動地圖"
+    },
+    "buildings_map.html": {
+      "format": "HTML",
+      "description": "2D 互動地圖"
+    },
+    "buildings_table.csv": {
+      "format": "CSV",
+      "description": "建築資料表"
+    },
+    "buildings_table.xlsx": {
+      "format": "Excel",
+      "description": "Excel 格式資料表"
+    }
+  },
+  "data_sources": {
+    "NLSC": 6181,
+    "OSM": 319,
+    "merged_features": 2309
+  }
+}

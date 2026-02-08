@@ -1,0 +1,42 @@
+{
+  "directory": "raw",
+  "description": "原始 3D Tiles 和 Quadtree 數據",
+  "last_updated": "2026-02-08",
+  "structure": {
+    "NLSC_3D_tiles": {
+      "current": [
+        "113_J_liujia",
+        "112_A_yangming",
+        "112_D_gueiren",
+        "112_O_guangfu",
+        "112_O_boai"
+      ],
+      "previous": [],
+      "legacy": [
+        "109_A_yangming"
+      ]
+    },
+    "NLSC_quadtree": {
+      "current": [
+        "113_A_yangming",
+        "113_J_liujia",
+        "112_A_yangming",
+        "112_D_gueiren",
+        "112_O_boai"
+      ],
+      "legacy": [
+        "111_A_yangming",
+        "111_J_v4_liujia",
+        "109_A_yangming"
+      ]
+    },
+    "auxiliary": [
+      "taiwan-osm-latest.osm.pbf",
+      "taiwan-osm-latest-free.shp.zip"
+    ]
+  },
+  "data_sources": {
+    "NLSC": "國土測繪中心",
+    "OSM": "OpenStreetMap"
+  }
+}

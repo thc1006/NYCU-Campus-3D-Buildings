@@ -1,0 +1,64 @@
+cff-version: 1.2.0
+message: "如果您使用本資料集，請依照以下格式引用。"
+title: "NYCU Campus Building Spatial Dataset"
+abstract: "結合國土測繪中心 3D 建築模型與 OpenStreetMap 資料的陽明交大校園建築空間資料集。包含 5 個校區（光復、博愛、陽明、六家、歸仁）共約 7,836 棟建築，提供 3D 幾何、平面圖與空間屬性，適用於土木工程、建築與 GIS 研究。A comprehensive geospatial dataset combining NLSC 3D building models and OpenStreetMap data for National Yang Ming Chiao Tung University campuses."
+authors:
+  - family-names: "蔡"
+    given-names: "秀吉"
+    email: "hctsai@linux.com"
+    alias: "thc1006"
+    affiliation: "National Yang Ming Chiao Tung University"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"  # 如有 ORCID 請取消註解並填入
+repository-code: "https://github.com/YOUR_USERNAME/NQSD"
+url: "https://github.com/YOUR_USERNAME/NQSD"
+type: dataset
+keywords:
+  - GIS
+  - geospatial data
+  - building data
+  - 3D models
+  - NLSC
+  - OpenStreetMap
+  - Taiwan
+  - university campus
+  - civil engineering
+  - architecture
+  - urban planning
+  - 陽明交大
+  - 校園建築
+  - 空間資料
+license: "CC-BY-4.0 and ODbL-1.0"
+version: "1.0.0"
+date-released: "2026-02-08"
+
+# 資料來源標註
+references:
+  - type: dataset
+    title: "NLSC 3D Building Model Data"
+    authors:
+      - name: "National Land Surveying and Mapping Center"
+        alias: "國土測繪中心"
+    url: "https://3dmaps.nlsc.gov.tw/"
+    year: 2023
+    notes: "政府資料開放授權條款 (Open Government Data License, Taiwan)"
+
+  - type: dataset
+    title: "OpenStreetMap Taiwan"
+    authors:
+      - name: "OpenStreetMap Contributors"
+    url: "https://www.openstreetmap.org/"
+    license: "ODbL-1.0"
+    notes: "© OpenStreetMap contributors, Open Database License"
+
+  - type: other
+    title: "NYCU Official Campus Maps"
+    authors:
+      - name: "National Yang Ming Chiao Tung University"
+        alias: "國立陽明交通大學"
+    notes: "Fair use for educational and research purposes"
+
+# DOI 將在 Zenodo 整合後加入
+# identifiers:
+#   - type: doi
+#     value: "10.5281/zenodo.XXXXXX"
+#     description: "Zenodo DOI"

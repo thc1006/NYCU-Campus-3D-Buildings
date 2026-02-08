@@ -1,0 +1,22 @@
+{
+  "campus": "yangming",
+  "campus_name": "陽明校區 (Yangming Campus)",
+  "layer": "112_A",
+  "bbox": {
+    "lon_min": 121.508,
+    "lon_max": 121.525,
+    "lat_min": 25.112,
+    "lat_max": 25.128
+  },
+  "tiles": [
+    {
+      "campus": "yangming",
+      "level": 5,
+      "row": 14,
+      "col": 23,
+      "size": 294
+    }
+  ],
+  "total_tiles": 1,
+  "total_bytes": 294
+}

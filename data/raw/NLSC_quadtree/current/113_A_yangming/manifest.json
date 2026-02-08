@@ -1,0 +1,90 @@
+{
+  "campus": "yangming",
+  "name": "陽明校區",
+  "name_en": "Yangming Campus",
+  "layer": "113_A",
+  "method": "quadtree_bfs_from_root",
+  "max_level": 10,
+  "margin": 0.02,
+  "bbox": {
+    "lon_min": 121.503,
+    "lon_max": 121.53,
+    "lat_min": 25.107,
+    "lat_max": 25.133
+  },
+  "tiles": [
+    {
+      "level": 0,
+      "row": 0,
+      "col": 0,
+      "size": 277154,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 1,
+      "row": 0,
+      "col": 0,
+      "size": 309316,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 1,
+      "row": 0,
+      "col": 1,
+      "size": 58218,
+      "has_build_id": true,
+      "children": [
+        3
+      ]
+    },
+    {
+      "level": 1,
+      "row": 1,
+      "col": 0,
+      "size": 456859,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 1,
+      "row": 1,
+      "col": 1,
+      "size": 297380,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 2,
+      "row": 1,
+      "col": 3,
+      "size": 296,
+      "has_build_id": true,
+      "children": []
+    }
+  ],
+  "total_tiles": 6,
+  "total_bytes": 1399223,
+  "tiles_with_build_id": 6
+}

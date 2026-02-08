@@ -1,0 +1,61 @@
+name: Archive Release to Zenodo
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Zenodo Integration Info
+        run: |
+          echo "🎉 Release ${{ github.event.release.tag_name }} published!"
+          echo ""
+          echo "📦 Zenodo will automatically archive this release and assign a DOI."
+          echo ""
+          echo "⚙️ To enable Zenodo integration:"
+          echo "1. Visit https://zenodo.org/"
+          echo "2. Sign in with GitHub"
+          echo "3. Go to Settings → GitHub"
+          echo "4. Enable this repository"
+          echo "5. Create a new release to trigger archiving"
+          echo ""
+          echo "📚 After archiving:"
+          echo "- DOI will be available on the Zenodo record"
+          echo "- Update README.md with the DOI badge"
+          echo "- Update CITATION.cff with the DOI"
+          echo ""
+          echo "🔗 Release URL: ${{ github.event.release.html_url }}"
+
+      - name: Create Release Summary
+        run: |
+          cat > $GITHUB_STEP_SUMMARY << EOF
+          ## 📦 Release Published
+
+          **Version:** ${{ github.event.release.tag_name }}
+          **Release URL:** ${{ github.event.release.html_url }}
+
+          ### ✅ Next Steps for Zenodo Integration
+
+          1. **Enable Zenodo Integration** (one-time setup)
+             - Visit [Zenodo GitHub Integration](https://zenodo.org/account/settings/github/)
+             - Find and enable this repository
+
+          2. **Verify Archiving**
+             - Check [Zenodo uploads](https://zenodo.org/deposit) after release
+             - DOI will be assigned automatically
+
+          3. **Update Project with DOI**
+             - Add DOI badge to README.md
+             - Update CITATION.cff with DOI
+             - Update .zenodo.json if needed
+
+          ### 📚 Resources
+          - [Zenodo GitHub Guide](https://help.zenodo.org/docs/github/)
+          - [Making Your Code Citable](https://guides.github.com/activities/citable-code/)
+          EOF

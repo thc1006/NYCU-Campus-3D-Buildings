@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>NYCU Campus Buildings - Merged OSM + NLSC Data</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  body { margin: 0; padding: 0; }
+  #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+  .info-panel {
+    position: absolute; top: 10px; right: 10px; z-index: 1000;
+    background: white; padding: 12px 16px; border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); max-width: 380px;
+    font-family: 'Microsoft JhengHei', 'PingFang TC', sans-serif;
+    font-size: 13px; max-height: calc(100vh - 30px); overflow-y: auto;
+  }
+  .info-panel h3 { margin: 0 0 8px; font-size: 15px; }
+  .info-panel table { width: 100%; border-collapse: collapse; }
+  .info-panel td { padding: 2px 4px; border-bottom: 1px solid #eee; vertical-align: top; }
+  .info-panel td:first-child { font-weight: bold; white-space: nowrap; color: #555; width: 90px; }
+  .legend {
+    position: absolute; bottom: 30px; left: 10px; z-index: 1000;
+    background: white; padding: 10px 14px; border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    font-family: 'Microsoft JhengHei', sans-serif; font-size: 12px;
+  }
+  .legend-item { display: flex; align-items: center; margin: 3px 0; }
+  .legend-color { width: 20px; height: 14px; margin-right: 8px; border: 1px solid #999; border-radius: 2px; }
+  .stats {
+    position: absolute; top: 10px; left: 60px; z-index: 1000;
+    background: white; padding: 8px 14px; border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    font-family: 'Microsoft JhengHei', sans-serif; font-size: 12px;
+  }
+  .search-box {
+    position: absolute; top: 10px; left: 300px; z-index: 1000;
+  }
+  .search-box input {
+    padding: 8px 12px; border: none; border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); width: 250px;
+    font-size: 14px; font-family: 'Microsoft JhengHei', sans-serif;
+  }
+  .search-results {
+    background: white; border-radius: 0 0 8px 8px; max-height: 300px;
+    overflow-y: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  .search-results div {
+    padding: 6px 12px; cursor: pointer; border-bottom: 1px solid #eee;
+    font-size: 13px;
+  }
+  .search-results div:hover { background: #e8f4fd; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div class="stats" id="stats">Loading data...</div>
+<div class="search-box">
+  <input type="text" id="search" placeholder="Search building name..." oninput="onSearch(this.value)">
+  <div class="search-results" id="searchResults"></div>
+</div>
+<div class="info-panel" id="info" style="display:none"></div>
+<div class="legend">
+  <div style="font-weight:bold; margin-bottom:5px;">Building Height</div>
+  <div class="legend-item"><div class="legend-color" style="background:#fee5d9"></div>&lt; 10m</div>
+  <div class="legend-item"><div class="legend-color" style="background:#fcae91"></div>10-20m</div>
+  <div class="legend-item"><div class="legend-color" style="background:#fb6a4a"></div>20-30m</div>
+  <div class="legend-item"><div class="legend-color" style="background:#de2d26"></div>30-40m</div>
+  <div class="legend-item"><div class="legend-color" style="background:#a50f15"></div>&gt; 40m</div>
+  <div style="margin-top:6px; border-top:1px solid #ddd; padding-top:6px;">
+    <div class="legend-item"><div class="legend-color" style="background:#2196F3; opacity:0.5"></div>OSM only (no height)</div>
+    <div class="legend-item"><div class="legend-color" style="background:#999; border-radius:50%; width:10px; height:10px"></div>NLSC only (centroid)</div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+var map = L.map('map').setView([24.787, 120.997], 16);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 20,
+  attribution: '&copy; OpenStreetMap contributors | NLSC 3D Maps | NYCU Campus'
+}).addTo(map);
+
+function heightColor(h) {
+  if (h <= 0) return '#2196F3';
+  if (h < 10) return '#fee5d9';
+  if (h < 20) return '#fcae91';
+  if (h < 30) return '#fb6a4a';
+  if (h < 40) return '#de2d26';
+  return '#a50f15';
+}
+
+function showInfo(props, geomType) {
+  var panel = document.getElementById('info');
+  var name = props.name || props.BUILD_ID || 'Unnamed';
+  var nameEn = props['name:en'] || '';
+  var h = props.nlsc_BUILD_H || props.BUILD_H || props.height || '';
+  var levels = props['building:levels'] || '';
+  var btype = props.building || props.BUILD_STR || '';
+  var source = props.source === 'NLSC_only' ? 'NLSC only' : 'OSM + NLSC';
+  var nlscId = props.nlsc_BUILD_ID || props.BUILD_ID || '';
+  var osmId = props.osm_id || '';
+  var modelName = props.nlsc_MODEL_NAME || props.MODEL_NAME || '';
+  var matchCount = props.nlsc_match_count || '';
+
+  var html = '<h3>' + name + '</h3>';
+  if (nameEn) html += '<div style="color:#666;margin-bottom:8px">' + nameEn + '</div>';
+  html += '<table>';
+  if (h) html += '<tr><td>Height</td><td>' + h + ' m</td></tr>';
+  if (levels) html += '<tr><td>Floors</td><td>' + levels + '</td></tr>';
+  if (btype) html += '<tr><td>Type</td><td>' + btype + '</td></tr>';
+  html += '<tr><td>Source</td><td>' + source + '</td></tr>';
+  if (osmId) html += '<tr><td>OSM ID</td><td>' + osmId + '</td></tr>';
+  if (nlscId) html += '<tr><td>NLSC ID</td><td>' + nlscId + '</td></tr>';
+  if (modelName) html += '<tr><td>Model</td><td>' + modelName + '</td></tr>';
+  if (matchCount > 1) html += '<tr><td>NLSC parts</td><td>' + matchCount + '</td></tr>';
+  var e97 = props.nlsc_CENT_E_97 || props.CENT_E_97 || '';
+  var n97 = props.nlsc_CENT_N_97 || props.CENT_N_97 || '';
+  if (e97) html += '<tr><td>TWD97 E</td><td>' + e97 + '</td></tr>';
+  if (n97) html += '<tr><td>TWD97 N</td><td>' + n97 + '</td></tr>';
+  html += '</table>';
+  panel.innerHTML = html;
+  panel.style.display = 'block';
+}
+
+var allFeatures = [];
+var layerMap = {};
+
+function loadData() {
+  fetch('NYCU_buildings_merged.geojson')
+    .then(r => r.json())
+    .then(function(data) {
+      var meta = data.metadata || {};
+      document.getElementById('stats').innerHTML =
+        '<b>NYCU Campus Buildings</b><br>' +
+        'OSM: ' + (meta.osm_buildings || '?') + ' | ' +
+        'NLSC: ' + (meta.nlsc_buildings || '?') + '<br>' +
+        'Matched: ' + (meta.osm_with_nlsc_match || '?') +
+        ' (' + (meta.osm_with_nlsc_match && meta.osm_buildings ?
+          Math.round(100*meta.osm_with_nlsc_match/meta.osm_buildings) + '%' : '?') + ')' +
+        ' | Total: ' + (meta.total_merged_features || data.features.length);
+
+      data.features.forEach(function(feat, idx) {
+        var props = feat.properties;
+        var h = parseFloat(props.nlsc_BUILD_H || props.BUILD_H || props.height || '0');
+        var color = heightColor(h);
+        var name = props.name || props.BUILD_ID || '';
+
+        var layer;
+        if (feat.geometry.type === 'Polygon') {
+          layer = L.polygon(
+            feat.geometry.coordinates[0].map(function(c) { return [c[1], c[0]]; }),
+            {
+              color: h > 0 ? '#333' : '#2196F3',
+              weight: h > 0 ? 1.5 : 1,
+              fillColor: color,
+              fillOpacity: h > 0 ? 0.65 : 0.3,
+            }
+          );
+        } else if (feat.geometry.type === 'Point') {
+          layer = L.circleMarker(
+            [feat.geometry.coordinates[1], feat.geometry.coordinates[0]],
+            {
+              radius: 3,
+              color: '#666',
+              weight: 0.5,
+              fillColor: color,
+              fillOpacity: 0.6,
+            }
+          );
+        }
+
+        if (layer) {
+          var tooltip = name;
+          if (h > 0) tooltip += ' (' + h.toFixed(1) + 'm)';
+          if (tooltip) layer.bindTooltip(tooltip, { sticky: true, direction: 'top' });
+          layer.on('click', function() { showInfo(props, feat.geometry.type); });
+          layer.addTo(map);
+          allFeatures.push({ name: name, nameEn: props['name:en'] || '', layer: layer, props: props });
+          if (name) layerMap[name] = layer;
+        }
+      });
+    });
+}
+
+function onSearch(q) {
+  var results = document.getElementById('searchResults');
+  if (!q || q.length < 1) { results.innerHTML = ''; return; }
+  q = q.toLowerCase();
+  var matches = allFeatures.filter(function(f) {
+    return (f.name && f.name.toLowerCase().indexOf(q) >= 0) ||
+           (f.nameEn && f.nameEn.toLowerCase().indexOf(q) >= 0);
+  }).slice(0, 15);
+
+  results.innerHTML = matches.map(function(m) {
+    var display = m.name;
+    if (m.nameEn) display += ' (' + m.nameEn + ')';
+    var h = m.props.nlsc_BUILD_H || m.props.BUILD_H || '';
+    if (h) display += ' - ' + h + 'm';
+    return '<div onclick="flyTo(\'' + m.name.replace(/'/g, "\\'") + '\')">' + display + '</div>';
+  }).join('');
+}
+
+function flyTo(name) {
+  var layer = layerMap[name];
+  if (layer) {
+    map.flyTo(layer.getLatLng ? layer.getLatLng() : layer.getBounds().getCenter(), 18);
+    layer.openTooltip();
+    var feat = allFeatures.find(function(f) { return f.name === name; });
+    if (feat) showInfo(feat.props);
+  }
+  document.getElementById('searchResults').innerHTML = '';
+  document.getElementById('search').value = name;
+}
+
+loadData();
+</script>
+</body>
+</html>

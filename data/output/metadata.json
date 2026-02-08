@@ -1,0 +1,49 @@
+{
+  "directory": "output",
+  "description": "最終可視化和分析結果",
+  "last_updated": "2026-02-08",
+  "current_version": "v1_2026-02-07",
+  "files": {
+    "buildings_merged.geojson": {
+      "format": "GeoJSON",
+      "size_mb": 1.24,
+      "features": 2309,
+      "description": "合併的完整建築數據"
+    },
+    "buildings_3d.geojson": {
+      "format": "GeoJSON",
+      "size_kb": 232,
+      "description": "3D 建築數據"
+    },
+    "buildings_3d.html": {
+      "format": "HTML",
+      "size_kb": 13,
+      "description": "3D 互動地圖"
+    },
+    "buildings_map.html": {
+      "format": "HTML",
+      "size_kb": 9,
+      "description": "2D 互動地圖"
+    },
+    "buildings_table.csv": {
+      "format": "CSV",
+      "size_kb": 29,
+      "description": "建築資料表"
+    },
+    "buildings_table.xlsx": {
+      "format": "Excel",
+      "size_kb": 52,
+      "description": "Excel 格式資料表"
+    }
+  },
+  "data_sources": {
+    "NLSC": "6,181 棟建築（含周邊）",
+    "OSM": "319 棟建築（光復校區）",
+    "merged": "2,309 個特徵（去重後）"
+  },
+  "version_strategy": {
+    "latest": "永遠指向最新版本",
+    "versioned": "帶時間戳的版本存檔",
+    "archive": "壓縮的舊版本"
+  }
+}

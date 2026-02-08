@@ -1,0 +1,51 @@
+{
+  "directory": "floor_plans",
+  "description": "校園建築平面圖和相關文件",
+  "last_updated": "2026-02-08",
+  "categories": {
+    "auditorium": {
+      "count": 2,
+      "files": [
+        "panorama.pdf",
+        "seatmap.pdf"
+      ],
+      "description": "禮堂全景圖和座位配置圖"
+    },
+    "buildings": {
+      "count": 2,
+      "files": [
+        "einfo_building_map.pdf",
+        "eng5_exam_floorplan.pdf"
+      ],
+      "description": "建築物平面圖"
+    },
+    "campus": {
+      "count": 2,
+      "files": [
+        "yangming_campus_map.pdf",
+        "yangming_map_old.pdf"
+      ],
+      "description": "校園地圖"
+    },
+    "administrative": {
+      "count": 1,
+      "files": [
+        "fee_standard.pdf"
+      ],
+      "description": "行政文件",
+      "issues": [
+        "fee_standard.pdf 文件損壞（54 bytes）"
+      ]
+    }
+  },
+  "total_pdfs": 7,
+  "preview_images": 10,
+  "issues": [
+    {
+      "file": "pdf/administrative/fee_standard.pdf",
+      "severity": "high",
+      "description": "文件大小異常（54 bytes），可能損壞",
+      "action_needed": "需要修復或替換"
+    }
+  ]
+}

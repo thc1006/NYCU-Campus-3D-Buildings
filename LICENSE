@@ -1,0 +1,143 @@
+# 混合授權說明 / Mixed License Information
+
+本專案結合多個資料來源，採用混合授權策略。
+
+This project combines multiple data sources with different licenses.
+
+---
+
+## 📊 資料來源與授權 / Data Sources and Licenses
+
+### 1. NLSC 3D 建築資料 / NLSC 3D Building Data
+
+**來源 / Source**: 國土測繪中心（National Land Surveying and Mapping Center, Taiwan）
+**網址 / Website**: https://3dmaps.nlsc.gov.tw/
+**授權 / License**: 政府資料開放授權條款（Open Government Data License, Taiwan）
+**相容性 / Compatible with**: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+**標註要求 / Attribution**:
+```
+資料來源：國土測繪中心
+Data Source: National Land Surveying and Mapping Center (NLSC), Taiwan
+```
+
+---
+
+### 2. OpenStreetMap 資料 / OpenStreetMap Data
+
+**來源 / Source**: OpenStreetMap 貢獻者（OpenStreetMap Contributors）
+**網址 / Website**: https://www.openstreetmap.org/
+**授權 / License**: Open Database License (ODbL) 1.0
+**授權網址 / License URL**: https://opendatacommons.org/licenses/odbl/
+
+**標註要求 / Attribution** (必須 / REQUIRED):
+```
+© OpenStreetMap contributors
+資料採用開放資料庫授權
+Data available under the Open Database License
+```
+
+**ODbL 重要條款 / ODbL Key Requirements**:
+1. ✅ 必須標註 OpenStreetMap 貢獻者 / Must attribute OSM contributors
+2. ✅ 衍生資料庫必須採用 ODbL / Derived databases must use ODbL
+3. ✅ 保持資料開放 / Keep data open
+
+詳細資訊 / More info: https://www.openstreetmap.org/copyright
+
+---
+
+### 3. NYCU 官方資料 / NYCU Official Data
+
+**來源 / Source**: 國立陽明交通大學（National Yang Ming Chiao Tung University）
+**內容 / Content**: 校園地圖、平面圖 / Campus maps, floor plans
+**用途 / Usage**: 教育與研究用途合理使用 / Fair use for educational and research purposes
+
+**標註 / Attribution**:
+```
+校園地圖由國立陽明交通大學提供
+Campus maps courtesy of National Yang Ming Chiao Tung University
+```
+
+---
+
+## 🔄 本專案衍生內容 / Derived Content (This Project)
+
+### 處理腳本 / Processing Scripts
+- **位置 / Location**: `scripts/` 目錄
+- **授權 / License**: MIT License
+
+### 文件與範例 / Documentation and Examples
+- **位置 / Location**: `docs/`, `examples/`, `README.md` 等
+- **授權 / License**: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+### 合併資料集 / Merged Dataset
+- **檔案 / Files**: `data/output/latest/buildings_merged.geojson` 等
+- **授權 / License**: **CC BY 4.0 + ODbL 標註要求**
+
+因包含 OpenStreetMap 資料，合併資料集必須：
+- 遵守 CC BY 4.0 條款（NLSC 部分）
+- 遵守 ODbL 條款（OSM 部分）
+- 明確標註兩個資料來源
+
+---
+
+## 📝 如何引用 / How to Cite
+
+請參考 `CITATION.cff` 檔案以取得標準引用格式。
+
+See `CITATION.cff` for standard citation format.
+
+**範例 / Example**:
+```
+本研究使用之建築資料結合：
+1. 國土測繪中心 3D 建築模型資料（政府資料開放授權）
+2. OpenStreetMap 建築輪廓資料（© OSM 貢獻者，ODbL 1.0）
+3. NQSD 專案整合處理（CC BY 4.0）
+
+This research uses building data combining:
+1. NLSC 3D Building Models (Open Government Data License)
+2. OpenStreetMap footprints (© OSM contributors, ODbL 1.0)
+3. NQSD project integration (CC BY 4.0)
+```
+
+---
+
+## ⚖️ 授權相容性 / License Compatibility
+
+| 您的專案授權<br>Your Project License | 相容性<br>Compatible? | 說明<br>Notes |
+|------|---------|-------|
+| 學術研究<br>Academic Research | ✅ 是 | 遵守標註要求即可<br>Follow attribution requirements |
+| 開源（MIT, Apache）<br>Open Source | ✅ 是 | 衍生 DB 需用 ODbL<br>Derived DB must use ODbL |
+| GPL/AGPL | ✅ 是 | 與 ODbL 相容<br>Compatible with ODbL |
+| CC BY 4.0 | ⚠️ 部分 | 需加上 ODbL 標註<br>Must add ODbL attribution |
+| 專有/封閉<br>Proprietary | ⚠️ 有限 | OSM 資料需遵守 ODbL<br>OSM data requires ODbL compliance |
+
+---
+
+## 📞 授權問題 / License Questions
+
+**NLSC 資料 / For NLSC Data**:
+- 網站 / Website: https://www.nlsc.gov.tw/
+- 開放資料平台 / Open Data: https://data.gov.tw/
+
+**OpenStreetMap 資料 / For OSM Data**:
+- 著作權 FAQ / Copyright FAQ: https://www.openstreetmap.org/copyright
+- 授權 FAQ / License FAQ: https://wiki.osmfoundation.org/wiki/Licence
+
+**本專案 / For This Project**:
+- 開啟 GitHub Issue: https://github.com/YOUR_USERNAME/NQSD/issues
+- 參考貢獻指南 / See CONTRIBUTING.md
+
+---
+
+## ⚠️ 免責聲明 / Disclaimer
+
+本資料集按「現狀」提供，不提供任何明示或暗示的保證。專案維護者已盡合理努力遵守所有適用授權，但使用者應自行確保其使用或散佈資料時的合規性。
+
+This dataset is provided "AS IS" without warranty of any kind. The project maintainers have made reasonable efforts to comply with all applicable licenses, but users are responsible for ensuring their own compliance when using or distributing this data.
+
+---
+
+**文件版本 / Document Version**: 1.0.0
+**最後更新 / Last Updated**: 2026-02-08
+**維護者 / Maintained by**: 蔡秀吉 (thc1006) <hctsai@linux.com>

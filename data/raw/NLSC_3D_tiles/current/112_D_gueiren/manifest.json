@@ -1,0 +1,1296 @@
+{
+  "campus": "gueiren",
+  "campus_name": "歸仁校區 (Gueiren Campus)",
+  "layer": "112_D",
+  "bbox": {
+    "lon_min": 120.298,
+    "lon_max": 120.312,
+    "lat_min": 22.926,
+    "lat_max": 22.94
+  },
+  "tiles": [
+    {
+      "campus": "gueiren",
+      "level": 5,
+      "row": 11,
+      "col": 23,
+      "size": 55338
+    },
+    {
+      "campus": "gueiren",
+      "level": 5,
+      "row": 11,
+      "col": 24,
+      "size": 22344
+    },
+    {
+      "campus": "gueiren",
+      "level": 5,
+      "row": 11,
+      "col": 25,
+      "size": 22140
+    },
+    {
+      "campus": "gueiren",
+      "level": 5,
+      "row": 12,
+      "col": 23,
+      "size": 99449
+    },
+    {
+      "campus": "gueiren",
+      "level": 5,
+      "row": 12,
+      "col": 24,
+      "size": 33373
+    },
+    {
+      "campus": "gueiren",
+      "level": 5,
+      "row": 12,
+      "col": 25,
+      "size": 20821
+    },
+    {
+      "campus": "gueiren",
+      "level": 5,
+      "row": 13,
+      "col": 23,
+      "size": 54678
+    },
+    {
+      "campus": "gueiren",
+      "level": 5,
+      "row": 13,
+      "col": 24,
+      "size": 14956
+    },
+    {
+      "campus": "gueiren",
+      "level": 5,
+      "row": 13,
+      "col": 25,
+      "size": 9341
+    },
+    {
+      "campus": "gueiren",
+      "level": 6,
+      "row": 23,
+      "col": 47,
+      "size": 18135
+    },
+    {
+      "campus": "gueiren",
+      "level": 6,
+      "row": 23,
+      "col": 48,
+      "size": 8950
+    },
+    {
+      "campus": "gueiren",
+      "level": 6,
+      "row": 23,
+      "col": 49,
+      "size": 23512
+    },
+    {
+      "campus": "gueiren",
+      "level": 6,
+      "row": 24,
+      "col": 47,
+      "size": 36915
+    },
+    {
+      "campus": "gueiren",
+      "level": 6,
+      "row": 24,
+      "col": 48,
+      "size": 52295
+    },
+    {
+      "campus": "gueiren",
+      "level": 6,
+      "row": 24,
+      "col": 49,
+      "size": 41121
+    },
+    {
+      "campus": "gueiren",
+      "level": 6,
+      "row": 25,
+      "col": 47,
+      "size": 100148
+    },
+    {
+      "campus": "gueiren",
+      "level": 6,
+      "row": 25,
+      "col": 48,
+      "size": 22888
+    },
+    {
+      "campus": "gueiren",
+      "level": 6,
+      "row": 25,
+      "col": 49,
+      "size": 10864
+    },
+    {
+      "campus": "gueiren",
+      "level": 7,
+      "row": 47,
+      "col": 95,
+      "size": 2568
+    },
+    {
+      "campus": "gueiren",
+      "level": 7,
+      "row": 47,
+      "col": 96,
+      "size": 7924
+    },
+    {
+      "campus": "gueiren",
+      "level": 7,
+      "row": 47,
+      "col": 97,
+      "size": 5663
+    },
+    {
+      "campus": "gueiren",
+      "level": 7,
+      "row": 48,
+      "col": 95,
+      "size": 26709
+    },
+    {
+      "campus": "gueiren",
+      "level": 7,
+      "row": 48,
+      "col": 96,
+      "size": 51874
+    },
+    {
+      "campus": "gueiren",
+      "level": 7,
+      "row": 48,
+      "col": 97,
+      "size": 49117
+    },
+    {
+      "campus": "gueiren",
+      "level": 7,
+      "row": 49,
+      "col": 95,
+      "size": 27394
+    },
+    {
+      "campus": "gueiren",
+      "level": 7,
+      "row": 49,
+      "col": 96,
+      "size": 18977
+    },
+    {
+      "campus": "gueiren",
+      "level": 7,
+      "row": 49,
+      "col": 97,
+      "size": 4305
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 94,
+      "col": 190,
+      "size": 1453
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 94,
+      "col": 191,
+      "size": 1394
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 94,
+      "col": 192,
+      "size": 1271
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 94,
+      "col": 193,
+      "size": 3765
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 94,
+      "col": 194,
+      "size": 8452
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 94,
+      "col": 195,
+      "size": 986
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 95,
+      "col": 190,
+      "size": 984
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 95,
+      "col": 191,
+      "size": 290
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 95,
+      "col": 192,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 95,
+      "col": 193,
+      "size": 6387
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 95,
+      "col": 194,
+      "size": 4652
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 95,
+      "col": 195,
+      "size": 292
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 96,
+      "col": 190,
+      "size": 12782
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 96,
+      "col": 191,
+      "size": 3231
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 96,
+      "col": 192,
+      "size": 1584
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 96,
+      "col": 193,
+      "size": 8095
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 96,
+      "col": 194,
+      "size": 17840
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 96,
+      "col": 195,
+      "size": 1304
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 97,
+      "col": 190,
+      "size": 9322
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 97,
+      "col": 191,
+      "size": 20589
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 97,
+      "col": 192,
+      "size": 39525
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 97,
+      "col": 193,
+      "size": 38288
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 97,
+      "col": 194,
+      "size": 43603
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 97,
+      "col": 195,
+      "size": 27097
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 98,
+      "col": 190,
+      "size": 8587
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 98,
+      "col": 191,
+      "size": 27231
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 98,
+      "col": 192,
+      "size": 10085
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 98,
+      "col": 193,
+      "size": 9385
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 98,
+      "col": 194,
+      "size": 2811
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 98,
+      "col": 195,
+      "size": 294
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 99,
+      "col": 190,
+      "size": 4895
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 99,
+      "col": 191,
+      "size": 5007
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 99,
+      "col": 192,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 99,
+      "col": 193,
+      "size": 4619
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 99,
+      "col": 194,
+      "size": 1803
+    },
+    {
+      "campus": "gueiren",
+      "level": 8,
+      "row": 99,
+      "col": 195,
+      "size": 91601
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 188,
+      "col": 380,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 188,
+      "col": 381,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 188,
+      "col": 382,
+      "size": 2505
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 188,
+      "col": 383,
+      "size": 989
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 188,
+      "col": 384,
+      "size": 74967
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 188,
+      "col": 385,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 188,
+      "col": 386,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 188,
+      "col": 387,
+      "size": 3407
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 188,
+      "col": 388,
+      "size": 6280
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 188,
+      "col": 389,
+      "size": 977
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 188,
+      "col": 390,
+      "size": 178876
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 188,
+      "col": 391,
+      "size": 292
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 189,
+      "col": 380,
+      "size": 293
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 189,
+      "col": 381,
+      "size": 5904
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 189,
+      "col": 382,
+      "size": 293
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 189,
+      "col": 383,
+      "size": 292
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 189,
+      "col": 384,
+      "size": 292
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 189,
+      "col": 385,
+      "size": 292
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 189,
+      "col": 386,
+      "size": 293
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 189,
+      "col": 387,
+      "size": 6970
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 189,
+      "col": 388,
+      "size": 292
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 189,
+      "col": 389,
+      "size": 258780
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 189,
+      "col": 390,
+      "size": 292
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 189,
+      "col": 391,
+      "size": 293
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 190,
+      "col": 380,
+      "size": 2513
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 190,
+      "col": 381,
+      "size": 292
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 190,
+      "col": 386,
+      "size": 290096
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 190,
+      "col": 387,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 190,
+      "col": 388,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 190,
+      "col": 389,
+      "size": 103071
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 191,
+      "col": 380,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 191,
+      "col": 381,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 191,
+      "col": 386,
+      "size": 294
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 191,
+      "col": 387,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 191,
+      "col": 388,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 191,
+      "col": 389,
+      "size": 2772
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 192,
+      "col": 380,
+      "size": 75162
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 192,
+      "col": 381,
+      "size": 15849
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 192,
+      "col": 382,
+      "size": 290
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 192,
+      "col": 383,
+      "size": 2825
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 192,
+      "col": 384,
+      "size": 2671
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 192,
+      "col": 385,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 192,
+      "col": 386,
+      "size": 294
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 192,
+      "col": 387,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 192,
+      "col": 388,
+      "size": 42986
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 192,
+      "col": 389,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 192,
+      "col": 390,
+      "size": 103247
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 192,
+      "col": 391,
+      "size": 292
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 193,
+      "col": 380,
+      "size": 16099
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 193,
+      "col": 381,
+      "size": 1161
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 193,
+      "col": 382,
+      "size": 50630
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 193,
+      "col": 383,
+      "size": 92917
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 193,
+      "col": 384,
+      "size": 292
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 193,
+      "col": 385,
+      "size": 65188
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 193,
+      "col": 386,
+      "size": 294
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 193,
+      "col": 387,
+      "size": 24782
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 193,
+      "col": 388,
+      "size": 9114
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 193,
+      "col": 389,
+      "size": 37687
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 193,
+      "col": 390,
+      "size": 294
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 193,
+      "col": 391,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 194,
+      "col": 380,
+      "size": 293
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 194,
+      "col": 381,
+      "size": 221650
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 194,
+      "col": 382,
+      "size": 290
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 194,
+      "col": 383,
+      "size": 290
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 194,
+      "col": 384,
+      "size": 6302
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 194,
+      "col": 385,
+      "size": 101182
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 194,
+      "col": 386,
+      "size": 9167
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 194,
+      "col": 387,
+      "size": 91226
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 194,
+      "col": 388,
+      "size": 49334
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 194,
+      "col": 389,
+      "size": 58034
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 194,
+      "col": 390,
+      "size": 19039
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 194,
+      "col": 391,
+      "size": 39666
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 195,
+      "col": 380,
+      "size": 6089
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 195,
+      "col": 381,
+      "size": 16021
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 195,
+      "col": 382,
+      "size": 290
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 195,
+      "col": 383,
+      "size": 76163
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 195,
+      "col": 384,
+      "size": 80365
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 195,
+      "col": 385,
+      "size": 61366
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 195,
+      "col": 386,
+      "size": 17852
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 195,
+      "col": 387,
+      "size": 30202
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 195,
+      "col": 388,
+      "size": 86018
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 195,
+      "col": 389,
+      "size": 8606
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 195,
+      "col": 390,
+      "size": 293
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 195,
+      "col": 391,
+      "size": 7062
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 196,
+      "col": 380,
+      "size": 8458
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 196,
+      "col": 381,
+      "size": 290
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 196,
+      "col": 382,
+      "size": 33653
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 196,
+      "col": 383,
+      "size": 50350
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 196,
+      "col": 384,
+      "size": 9774
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 196,
+      "col": 385,
+      "size": 2798
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 196,
+      "col": 386,
+      "size": 11346
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 196,
+      "col": 387,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 196,
+      "col": 388,
+      "size": 6318
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 196,
+      "col": 389,
+      "size": 2720
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 197,
+      "col": 380,
+      "size": 294
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 197,
+      "col": 381,
+      "size": 17740
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 197,
+      "col": 382,
+      "size": 2627
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 197,
+      "col": 383,
+      "size": 5028
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 197,
+      "col": 384,
+      "size": 16700
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 197,
+      "col": 385,
+      "size": 67905
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 197,
+      "col": 386,
+      "size": 13359
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 197,
+      "col": 387,
+      "size": 255008
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 197,
+      "col": 388,
+      "size": 83855
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 197,
+      "col": 389,
+      "size": 294
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 198,
+      "col": 380,
+      "size": 4645
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 198,
+      "col": 381,
+      "size": 135289
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 198,
+      "col": 382,
+      "size": 8582
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 198,
+      "col": 383,
+      "size": 215251
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 198,
+      "col": 386,
+      "size": 290
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 198,
+      "col": 387,
+      "size": 220675
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 198,
+      "col": 388,
+      "size": 3477
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 198,
+      "col": 389,
+      "size": 292
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 199,
+      "col": 380,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 199,
+      "col": 381,
+      "size": 290
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 199,
+      "col": 382,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 199,
+      "col": 383,
+      "size": 291
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 199,
+      "col": 386,
+      "size": 290
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 199,
+      "col": 387,
+      "size": 290
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 199,
+      "col": 388,
+      "size": 290
+    },
+    {
+      "campus": "gueiren",
+      "level": 9,
+      "row": 199,
+      "col": 389,
+      "size": 292
+    }
+  ],
+  "total_tiles": 183,
+  "total_bytes": 4916084
+}

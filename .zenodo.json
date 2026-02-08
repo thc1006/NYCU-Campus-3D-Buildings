@@ -1,0 +1,86 @@
+{
+  "title": "NYCU Campus Building Spatial Dataset",
+  "description": "結合國土測繪中心 3D 建築模型與 OpenStreetMap 資料的陽明交大校園建築空間資料集。涵蓋 5 個校區：光復（6,181 棟）、博愛（1,023 棟）、陽明（446 棟）、六家（169 棟）、歸仁（17 棟），共約 7,836 棟建築，包含 20 個屬性欄位（高度、結構類型、TWD97 座標等）。適用於土木工程、建築與 GIS 研究。A comprehensive geospatial dataset combining NLSC 3D building models and OpenStreetMap data for National Yang Ming Chiao Tung University campuses. Covers 5 campuses with ~7,836 buildings and 20 attribute fields.",
+  "creators": [
+    {
+      "name": "蔡秀吉 (Hsiu-Chi Tsai)",
+      "affiliation": "National Yang Ming Chiao Tung University",
+      "orcid": ""
+    }
+  ],
+  "contributors": [
+    {
+      "name": "National Land Surveying and Mapping Center (NLSC)",
+      "type": "DataCollector",
+      "affiliation": "Ministry of the Interior, Taiwan"
+    },
+    {
+      "name": "OpenStreetMap Contributors",
+      "type": "DataCollector"
+    }
+  ],
+  "keywords": [
+    "GIS",
+    "geospatial data",
+    "building data",
+    "3D models",
+    "NLSC",
+    "OpenStreetMap",
+    "Taiwan",
+    "university campus",
+    "civil engineering",
+    "architecture",
+    "urban planning",
+    "spatial analysis",
+    "campus mapping",
+    "陽明交大",
+    "NYCU",
+    "校園建築",
+    "空間資料"
+  ],
+  "subjects": [
+    {
+      "term": "Geographic Information Systems",
+      "scheme": "dewey",
+      "identifier": "910.285"
+    },
+    {
+      "term": "Architecture",
+      "scheme": "dewey",
+      "identifier": "720"
+    },
+    {
+      "term": "Civil Engineering",
+      "scheme": "dewey",
+      "identifier": "624"
+    }
+  ],
+  "license": {
+    "id": "CC-BY-4.0"
+  },
+  "upload_type": "dataset",
+  "access_right": "open",
+  "language": "zho",
+  "communities": [
+    {
+      "identifier": "zenodo"
+    }
+  ],
+  "grants": [],
+  "references": [
+    "https://3dmaps.nlsc.gov.tw/",
+    "https://www.openstreetmap.org/",
+    "https://www.nycu.edu.tw/"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/YOUR_USERNAME/NQSD",
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "resource_type": "software"
+    }
+  ],
+  "version": "1.0.0",
+  "publication_date": "2026-02-08",
+  "notes": "本資料集結合多個資料來源：(1) NLSC 3D 建築模型資料（政府資料開放授權，相容 CC BY 4.0）；(2) OpenStreetMap 建築輪廓與名稱（© OSM 貢獻者，ODbL 1.0）。使用時請遵守各資料來源之授權條款。詳見 LICENSE 檔案。This dataset combines: (1) NLSC 3D building models (Open Government Data License, Taiwan); (2) OpenStreetMap footprints and names (© OSM contributors, ODbL 1.0). Please comply with respective license terms. See LICENSE file for details."
+}

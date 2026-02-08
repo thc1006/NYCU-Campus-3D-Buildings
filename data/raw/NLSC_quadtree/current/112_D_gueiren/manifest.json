@@ -1,0 +1,244 @@
+{
+  "campus": "gueiren",
+  "name": "歸仁校區",
+  "name_en": "Gueiren Campus",
+  "layer": "112_D",
+  "method": "quadtree_bfs_from_root",
+  "max_level": 12,
+  "margin": 0.02,
+  "bbox": {
+    "lon_min": 120.29,
+    "lon_max": 120.32,
+    "lat_min": 22.918,
+    "lat_max": 22.948
+  },
+  "tiles": [
+    {
+      "level": 0,
+      "row": 0,
+      "col": 0,
+      "size": 270533,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 1,
+      "row": 0,
+      "col": 0,
+      "size": 275574,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 1,
+      "row": 0,
+      "col": 1,
+      "size": 265206,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 1,
+      "row": 1,
+      "col": 0,
+      "size": 280419,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 1,
+      "row": 1,
+      "col": 1,
+      "size": 261203,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "level": 2,
+      "row": 1,
+      "col": 3,
+      "size": 120885,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 3,
+      "row": 3,
+      "col": 6,
+      "size": 64435,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 4,
+      "row": 6,
+      "col": 12,
+      "size": 42884,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 5,
+      "row": 12,
+      "col": 24,
+      "size": 33373,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 6,
+      "row": 24,
+      "col": 48,
+      "size": 52295,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 7,
+      "row": 48,
+      "col": 96,
+      "size": 51874,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 8,
+      "row": 97,
+      "col": 192,
+      "size": 39525,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 9,
+      "row": 195,
+      "col": 384,
+      "size": 80365,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 9,
+      "row": 195,
+      "col": 385,
+      "size": 61366,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 10,
+      "row": 390,
+      "col": 769,
+      "size": 281442,
+      "has_build_id": true,
+      "children": []
+    },
+    {
+      "level": 10,
+      "row": 391,
+      "col": 769,
+      "size": 297574,
+      "has_build_id": true,
+      "children": []
+    },
+    {
+      "level": 10,
+      "row": 390,
+      "col": 770,
+      "size": 42291,
+      "has_build_id": true,
+      "children": [
+        3,
+        4
+      ]
+    },
+    {
+      "level": 10,
+      "row": 391,
+      "col": 770,
+      "size": 156992,
+      "has_build_id": true,
+      "children": []
+    },
+    {
+      "level": 11,
+      "row": 781,
+      "col": 1540,
+      "size": 355906,
+      "has_build_id": true,
+      "children": []
+    }
+  ],
+  "total_tiles": 19,
+  "total_bytes": 3034142,
+  "tiles_with_build_id": 19
+}

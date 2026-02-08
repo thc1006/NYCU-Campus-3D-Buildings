@@ -1,0 +1,41 @@
+{
+  "directory": "NLSC_3D_tiles",
+  "description": "國土測繪中心 3D Tiles 數據集",
+  "last_updated": "2026-02-08",
+  "datasets": [
+    {
+      "name": "113_J_liujia",
+      "version": "current",
+      "campus": "六甲",
+      "layers": [
+        "L5",
+        "L6"
+      ]
+    },
+    {
+      "name": "112_A_yangming",
+      "version": "current",
+      "campus": "陽明"
+    },
+    {
+      "name": "112_D_gueiren",
+      "version": "current",
+      "campus": "歸仁"
+    },
+    {
+      "name": "112_O_guangfu",
+      "version": "current",
+      "campus": "光復"
+    },
+    {
+      "name": "112_O_boai",
+      "version": "current",
+      "campus": "博愛"
+    },
+    {
+      "name": "109_A_yangming",
+      "version": "legacy",
+      "campus": "陽明"
+    }
+  ]
+}

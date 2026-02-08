@@ -1,0 +1,42 @@
+{
+  "directory": "processed",
+  "description": "處理後的建築數據",
+  "last_updated": "2026-02-08",
+  "structure": {
+    "buildings": {
+      "by_campus": {
+        "boai": {
+          "buildings": 1023,
+          "source": "NLSC Layer 112_O"
+        },
+        "yangming": {
+          "buildings": 446,
+          "source": "NLSC Layer 112_A/113_A"
+        },
+        "gueiren": {
+          "buildings": 17,
+          "source": "NLSC Layer 112_D"
+        },
+        "liujia": {
+          "buildings": 169,
+          "source": "NLSC Layer 113_J"
+        },
+        "guangfu": {
+          "buildings": 319,
+          "source": "OpenStreetMap"
+        }
+      },
+      "combined": {
+        "total_buildings": 6181,
+        "description": "包含周邊建物的合併數據"
+      }
+    },
+    "reference": [
+      "building_names_list.txt"
+    ]
+  },
+  "formats": {
+    "JSON": "原始建築資訊（包含高度、樓層等）",
+    "GeoJSON": "地理空間格式（可用於 GIS 軟體）"
+  }
+}

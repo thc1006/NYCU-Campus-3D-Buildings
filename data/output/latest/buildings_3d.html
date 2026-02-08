@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>NYCU 光復校區 3D 建築模型</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Microsoft JhengHei', 'PingFang TC', sans-serif; }
+  #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+  .panel {
+    position: absolute; z-index: 10; background: rgba(255,255,255,0.95);
+    border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+  }
+
+  .title-bar {
+    top: 12px; left: 12px; padding: 12px 18px;
+  }
+  .title-bar h1 { font-size: 16px; margin-bottom: 4px; }
+  .title-bar .subtitle { font-size: 12px; color: #666; }
+
+  .info-panel {
+    top: 12px; right: 12px; width: 320px; padding: 16px;
+    display: none; max-height: calc(100vh - 40px); overflow-y: auto;
+  }
+  .info-panel h2 { font-size: 16px; margin-bottom: 4px; }
+  .info-panel .en-name { font-size: 13px; color: #666; margin-bottom: 10px; }
+  .info-panel table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .info-panel td { padding: 4px 6px; border-bottom: 1px solid #eee; }
+  .info-panel td:first-child { font-weight: 600; color: #555; width: 100px; }
+  .info-panel .close-btn {
+    position: absolute; top: 10px; right: 14px; cursor: pointer;
+    font-size: 18px; color: #999; background: none; border: none;
+  }
+  .info-panel .close-btn:hover { color: #333; }
+
+  .controls {
+    bottom: 36px; left: 12px; padding: 10px 14px;
+  }
+  .controls label { font-size: 12px; display: block; margin-bottom: 6px; color: #444; }
+  .controls input[type=range] { width: 160px; }
+  .controls .btn-row { display: flex; gap: 6px; margin-top: 8px; }
+  .controls button {
+    padding: 5px 12px; border: 1px solid #ccc; border-radius: 6px;
+    background: #fff; cursor: pointer; font-size: 12px;
+    font-family: inherit;
+  }
+  .controls button:hover { background: #f0f0f0; }
+  .controls button.active { background: #2196F3; color: #fff; border-color: #2196F3; }
+
+  .legend {
+    bottom: 36px; right: 12px; padding: 10px 14px;
+  }
+  .legend .title { font-size: 12px; font-weight: 600; margin-bottom: 6px; }
+  .legend .bar {
+    width: 180px; height: 14px; border-radius: 3px;
+    background: linear-gradient(to right, #ffffcc, #fd8d3c, #e31a1c, #800026);
+  }
+  .legend .labels { display: flex; justify-content: space-between; font-size: 11px; color: #666; margin-top: 2px; }
+
+  .search-box {
+    position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 10;
+  }
+  .search-box input {
+    padding: 10px 16px; border: none; border-radius: 10px; width: 280px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2); font-size: 14px;
+    font-family: inherit; background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+  }
+  .search-results {
+    background: rgba(255,255,255,0.95); border-radius: 0 0 10px 10px;
+    max-height: 250px; overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  .search-results div {
+    padding: 8px 16px; cursor: pointer; font-size: 13px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .search-results div:hover { background: #e3f2fd; }
+  .search-results div small { color: #888; }
+
+  .tooltip {
+    position: absolute; z-index: 20; pointer-events: none;
+    background: rgba(0,0,0,0.8); color: #fff; padding: 6px 12px;
+    border-radius: 6px; font-size: 13px; white-space: nowrap;
+    transform: translate(-50%, -110%);
+  }
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<div class="panel title-bar">
+  <h1>NYCU 光復校區 3D 建築模型</h1>
+  <div class="subtitle">319 棟建築 | OSM 輪廓 + NLSC 高度 | 拖曳旋轉、滾輪縮放、右鍵傾斜</div>
+</div>
+
+<div class="search-box">
+  <input type="text" id="search" placeholder="搜尋建築名稱..." oninput="onSearch(this.value)">
+  <div class="search-results" id="searchResults"></div>
+</div>
+
+<div class="panel info-panel" id="info">
+  <button class="close-btn" onclick="document.getElementById('info').style.display='none'">&times;</button>
+  <div id="infoContent"></div>
+</div>
+
+<div class="panel controls">
+  <label>高度倍率: <span id="scaleLabel">1.0x</span></label>
+  <input type="range" id="scaleSlider" min="0.5" max="5" step="0.5" value="1.0"
+    oninput="updateScale(this.value)">
+  <div class="btn-row">
+    <button onclick="flyToView('bird')" title="鳥瞰">鳥瞰</button>
+    <button onclick="flyToView('north')" title="從北方看">北望</button>
+    <button onclick="flyToView('east')" title="從東方看">東望</button>
+    <button onclick="flyToView('street')" title="街景視角">街景</button>
+    <button id="btnSpin" onclick="toggleSpin()" title="自動旋轉">旋轉</button>
+  </div>
+</div>
+
+<div class="panel legend">
+  <div class="title">建築高度</div>
+  <div class="bar"></div>
+  <div class="labels"><span>0m</span><span>20m</span><span>40m</span><span>60m+</span></div>
+</div>
+
+<div class="tooltip" id="tooltip" style="display:none"></div>
+
+<script>
+const CAMPUS_CENTER = [120.9975, 24.787];
+let heightScale = 1.0;
+let spinning = false;
+let buildingData = [];
+
+const map = new maplibregl.Map({
+  container: 'map',
+  style: {
+    version: 8,
+    glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
+    sources: {
+      'osm-raster': {
+        type: 'raster',
+        tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+        tileSize: 256,
+        attribution: '&copy; OpenStreetMap contributors | NLSC 3D Maps'
+      }
+    },
+    layers: [{
+      id: 'osm-tiles',
+      type: 'raster',
+      source: 'osm-raster',
+      paint: { 'raster-saturation': -0.3, 'raster-brightness-max': 0.85 }
+    }]
+  },
+  center: CAMPUS_CENTER,
+  zoom: 16.2,
+  pitch: 55,
+  bearing: -30,
+  maxPitch: 80,
+  antialias: true
+});
+
+map.addControl(new maplibregl.NavigationControl(), 'top-right');
+
+map.on('load', function() {
+  fetch('NYCU_buildings_3d.geojson')
+    .then(r => r.json())
+    .then(function(data) {
+      buildingData = data.features;
+
+      map.addSource('buildings', { type: 'geojson', data: data });
+
+      // 3D extruded buildings
+      map.addLayer({
+        id: 'buildings-3d',
+        type: 'fill-extrusion',
+        source: 'buildings',
+        paint: {
+          'fill-extrusion-color': [
+            'interpolate', ['linear'], ['get', 'height_m'],
+            0, '#ffffcc',
+            10, '#fed976',
+            20, '#fd8d3c',
+            30, '#fc4e2a',
+            40, '#e31a1c',
+            60, '#800026'
+          ],
+          'fill-extrusion-height': ['*', ['get', 'height_m'], heightScale],
+          'fill-extrusion-base': 0,
+          'fill-extrusion-opacity': 0.85
+        }
+      });
+
+      // Building outlines on top
+      map.addLayer({
+        id: 'buildings-outline',
+        type: 'line',
+        source: 'buildings',
+        paint: {
+          'line-color': '#333',
+          'line-width': 0.5,
+          'line-opacity': 0.4
+        }
+      });
+
+      // Building labels
+      map.addLayer({
+        id: 'buildings-labels',
+        type: 'symbol',
+        source: 'buildings',
+        filter: ['has', 'display_name'],
+        layout: {
+          'text-field': ['get', 'display_name'],
+          'text-size': ['interpolate', ['linear'], ['zoom'], 15, 9, 18, 13],
+          'text-anchor': 'center',
+          'text-allow-overlap': false,
+          'text-ignore-placement': false,
+          'text-optional': true,
+          'text-padding': 4,
+        },
+        paint: {
+          'text-color': '#222',
+          'text-halo-color': 'rgba(255,255,255,0.9)',
+          'text-halo-width': 1.5
+        },
+        minzoom: 15.5
+      });
+
+      // Hover tooltip
+      map.on('mousemove', 'buildings-3d', function(e) {
+        map.getCanvas().style.cursor = 'pointer';
+        var props = e.features[0].properties;
+        var name = props.display_name || props.BUILD_ID || '';
+        var h = props.height_m || '';
+        if (name || h) {
+          var tip = document.getElementById('tooltip');
+          var text = name;
+          if (h) text += (name ? ' ' : '') + '(' + h + 'm)';
+          tip.textContent = text;
+          tip.style.display = 'block';
+          tip.style.left = e.point.x + 'px';
+          tip.style.top = e.point.y + 'px';
+        }
+      });
+
+      map.on('mouseleave', 'buildings-3d', function() {
+        map.getCanvas().style.cursor = '';
+        document.getElementById('tooltip').style.display = 'none';
+      });
+
+      // Click for details
+      map.on('click', 'buildings-3d', function(e) {
+        showBuildingInfo(e.features[0].properties);
+      });
+    });
+});
+
+function showBuildingInfo(props) {
+  var panel = document.getElementById('info');
+  var name = props.display_name || props.osm_id || 'Unnamed';
+  var nameEn = props.display_name_en || '';
+  var h = props.nlsc_BUILD_H || props.height_m || '';
+  var levels = props['building:levels'] || '';
+  var btype = props.building || '';
+  var nlscId = props.nlsc_BUILD_ID || '';
+  var modelName = props.nlsc_MODEL_NAME || '';
+  var matchCount = props.nlsc_match_count || '';
+
+  var html = '<h2>' + name + '</h2>';
+  if (nameEn) html += '<div class="en-name">' + nameEn + '</div>';
+  html += '<table>';
+  if (h) html += '<tr><td>NLSC 高度</td><td>' + h + ' m</td></tr>';
+  if (levels) html += '<tr><td>樓層數</td><td>' + levels + ' F</td></tr>';
+  if (h && levels) {
+    var perFloor = (parseFloat(h) / parseFloat(levels.replace('>',''))).toFixed(1);
+    html += '<tr><td>每層高度</td><td>~' + perFloor + ' m</td></tr>';
+  }
+  if (btype) html += '<tr><td>建築類型</td><td>' + btype + '</td></tr>';
+  var bstr = props.nlsc_BUILD_STR || '';
+  if (bstr) {
+    var strMap = {R:'鋼筋混凝土(RC)', S:'鋼骨(S)', B:'磚造', W:'木造', M:'金屬'};
+    html += '<tr><td>結構類型</td><td>' + (strMap[bstr] || bstr) + '</td></tr>';
+  }
+  if (nlscId) html += '<tr><td>NLSC ID</td><td style="font-size:11px">' + nlscId + '</td></tr>';
+  if (modelName) html += '<tr><td>3D 模型</td><td style="font-size:11px">' + modelName + '</td></tr>';
+  if (matchCount > 1) html += '<tr><td>NLSC 組件</td><td>' + matchCount + ' 棟</td></tr>';
+  html += '</table>';
+
+  document.getElementById('infoContent').innerHTML = html;
+  panel.style.display = 'block';
+}
+
+function updateScale(val) {
+  heightScale = parseFloat(val);
+  document.getElementById('scaleLabel').textContent = val + 'x';
+  if (map.getLayer('buildings-3d')) {
+    map.setPaintProperty('buildings-3d', 'fill-extrusion-height',
+      ['*', ['get', 'height_m'], heightScale]);
+  }
+}
+
+function flyToView(view) {
+  var opts = {
+    bird:   { center: CAMPUS_CENTER, zoom: 16.2, pitch: 55, bearing: -30, duration: 2000 },
+    north:  { center: [120.9975, 24.783], zoom: 16, pitch: 65, bearing: 0, duration: 2000 },
+    east:   { center: [121.002, 24.787], zoom: 16, pitch: 65, bearing: -90, duration: 2000 },
+    street: { center: [120.9965, 24.7868], zoom: 17.5, pitch: 75, bearing: -45, duration: 2000 },
+  };
+  map.flyTo(opts[view]);
+}
+
+function toggleSpin() {
+  spinning = !spinning;
+  document.getElementById('btnSpin').classList.toggle('active', spinning);
+  if (spinning) spinMap();
+}
+
+function spinMap() {
+  if (!spinning) return;
+  map.rotateTo(map.getBearing() + 0.3, { duration: 0 });
+  requestAnimationFrame(spinMap);
+}
+
+function onSearch(q) {
+  var results = document.getElementById('searchResults');
+  if (!q || q.length < 1) { results.innerHTML = ''; return; }
+  q = q.toLowerCase();
+  var matches = buildingData.filter(function(f) {
+    var p = f.properties;
+    return (p.display_name && p.display_name.toLowerCase().indexOf(q) >= 0) ||
+           (p.display_name_en && p.display_name_en.toLowerCase().indexOf(q) >= 0);
+  }).slice(0, 12);
+
+  results.innerHTML = matches.map(function(f) {
+    var p = f.properties;
+    var display = p.display_name || '';
+    var sub = '';
+    if (p.display_name_en) sub += p.display_name_en;
+    if (p.height_m) sub += (sub ? ' | ' : '') + p.height_m + 'm';
+    return '<div onclick="flyToBuilding(\'' + display.replace(/'/g, "\\'") + '\')">'
+      + display + (sub ? '<br><small>' + sub + '</small>' : '') + '</div>';
+  }).join('');
+}
+
+function flyToBuilding(name) {
+  var feat = buildingData.find(function(f) { return f.properties.display_name === name; });
+  if (!feat) return;
+
+  // Compute centroid
+  var coords = feat.geometry.coordinates[0];
+  var cx = 0, cy = 0;
+  for (var i = 0; i < coords.length - 1; i++) { cx += coords[i][0]; cy += coords[i][1]; }
+  cx /= (coords.length - 1); cy /= (coords.length - 1);
+
+  map.flyTo({ center: [cx, cy], zoom: 18, pitch: 65, bearing: map.getBearing(), duration: 1500 });
+  setTimeout(function() { showBuildingInfo(feat.properties); }, 1600);
+  document.getElementById('searchResults').innerHTML = '';
+  document.getElementById('search').value = name;
+}
+</script>
+</body>
+</html>

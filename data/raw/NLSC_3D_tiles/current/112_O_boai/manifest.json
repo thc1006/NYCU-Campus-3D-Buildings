@@ -1,0 +1,204 @@
+{
+  "campus": "boai",
+  "campus_name": "博愛校區 (Boai Campus)",
+  "layer": "112_O",
+  "bbox": {
+    "lon_min": 120.963,
+    "lon_max": 120.975,
+    "lat_min": 24.796,
+    "lat_max": 24.807
+  },
+  "tiles": [
+    {
+      "campus": "boai",
+      "level": 5,
+      "row": 12,
+      "col": 23,
+      "size": 250997
+    },
+    {
+      "campus": "boai",
+      "level": 5,
+      "row": 12,
+      "col": 24,
+      "size": 165739
+    },
+    {
+      "campus": "boai",
+      "level": 5,
+      "row": 12,
+      "col": 25,
+      "size": 359149
+    },
+    {
+      "campus": "boai",
+      "level": 5,
+      "row": 13,
+      "col": 23,
+      "size": 68232
+    },
+    {
+      "campus": "boai",
+      "level": 5,
+      "row": 13,
+      "col": 24,
+      "size": 326827
+    },
+    {
+      "campus": "boai",
+      "level": 5,
+      "row": 13,
+      "col": 25,
+      "size": 425291
+    },
+    {
+      "campus": "boai",
+      "level": 5,
+      "row": 14,
+      "col": 23,
+      "size": 284114
+    },
+    {
+      "campus": "boai",
+      "level": 5,
+      "row": 14,
+      "col": 24,
+      "size": 272128
+    },
+    {
+      "campus": "boai",
+      "level": 5,
+      "row": 14,
+      "col": 25,
+      "size": 231476
+    },
+    {
+      "campus": "boai",
+      "level": 6,
+      "row": 25,
+      "col": 47,
+      "size": 310386
+    },
+    {
+      "campus": "boai",
+      "level": 6,
+      "row": 25,
+      "col": 48,
+      "size": 138813
+    },
+    {
+      "campus": "boai",
+      "level": 6,
+      "row": 25,
+      "col": 49,
+      "size": 216758
+    },
+    {
+      "campus": "boai",
+      "level": 6,
+      "row": 26,
+      "col": 47,
+      "size": 37816
+    },
+    {
+      "campus": "boai",
+      "level": 6,
+      "row": 26,
+      "col": 48,
+      "size": 219189
+    },
+    {
+      "campus": "boai",
+      "level": 6,
+      "row": 26,
+      "col": 49,
+      "size": 373718
+    },
+    {
+      "campus": "boai",
+      "level": 6,
+      "row": 27,
+      "col": 47,
+      "size": 291
+    },
+    {
+      "campus": "boai",
+      "level": 6,
+      "row": 27,
+      "col": 48,
+      "size": 283357
+    },
+    {
+      "campus": "boai",
+      "level": 6,
+      "row": 27,
+      "col": 49,
+      "size": 213794
+    },
+    {
+      "campus": "boai",
+      "level": 7,
+      "row": 51,
+      "col": 95,
+      "size": 220153
+    },
+    {
+      "campus": "boai",
+      "level": 7,
+      "row": 51,
+      "col": 96,
+      "size": 157300
+    },
+    {
+      "campus": "boai",
+      "level": 7,
+      "row": 51,
+      "col": 97,
+      "size": 129027
+    },
+    {
+      "campus": "boai",
+      "level": 7,
+      "row": 52,
+      "col": 95,
+      "size": 81812
+    },
+    {
+      "campus": "boai",
+      "level": 7,
+      "row": 52,
+      "col": 96,
+      "size": 618923
+    },
+    {
+      "campus": "boai",
+      "level": 7,
+      "row": 52,
+      "col": 97,
+      "size": 190788
+    },
+    {
+      "campus": "boai",
+      "level": 7,
+      "row": 53,
+      "col": 95,
+      "size": 289
+    },
+    {
+      "campus": "boai",
+      "level": 7,
+      "row": 53,
+      "col": 96,
+      "size": 96491
+    },
+    {
+      "campus": "boai",
+      "level": 7,
+      "row": 53,
+      "col": 97,
+      "size": 126351
+    }
+  ],
+  "total_tiles": 27,
+  "total_bytes": 5799209
+}

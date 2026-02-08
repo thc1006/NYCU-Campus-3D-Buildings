@@ -1,0 +1,156 @@
+{
+  "campus": "boai",
+  "name": "博愛校區",
+  "name_en": "Boai Campus",
+  "layer": "112_O",
+  "method": "quadtree_bfs_from_root",
+  "max_level": 12,
+  "margin": 0.02,
+  "bbox": {
+    "lon_min": 120.955,
+    "lon_max": 120.982,
+    "lat_min": 24.79,
+    "lat_max": 24.815
+  },
+  "tiles": [
+    {
+      "level": 0,
+      "row": 0,
+      "col": 0,
+      "size": 275336,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 1,
+      "row": 0,
+      "col": 0,
+      "size": 281033,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 1,
+      "row": 0,
+      "col": 1,
+      "size": 376272,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 1,
+      "row": 1,
+      "col": 0,
+      "size": 266784,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 1,
+      "row": 1,
+      "col": 1,
+      "size": 220390,
+      "has_build_id": true,
+      "children": [
+        1,
+        2
+      ]
+    },
+    {
+      "level": 2,
+      "row": 1,
+      "col": 3,
+      "size": 573268,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 3,
+      "row": 3,
+      "col": 6,
+      "size": 938013,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 4,
+      "row": 6,
+      "col": 12,
+      "size": 555632,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 5,
+      "row": 13,
+      "col": 24,
+      "size": 326827,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 6,
+      "row": 26,
+      "col": 48,
+      "size": 219189,
+      "has_build_id": true,
+      "children": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "level": 7,
+      "row": 52,
+      "col": 96,
+      "size": 618923,
+      "has_build_id": true,
+      "children": []
+    }
+  ],
+  "total_tiles": 11,
+  "total_bytes": 4651667,
+  "tiles_with_build_id": 11
+}

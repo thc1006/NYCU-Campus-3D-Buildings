@@ -1,0 +1,22 @@
+{
+  "campus": "liujia",
+  "campus_name": "六家校區 (Liujia Campus)",
+  "layer": "113_J",
+  "bbox": {
+    "lon_min": 121.008,
+    "lon_max": 121.02,
+    "lat_min": 24.833,
+    "lat_max": 24.845
+  },
+  "tiles": [
+    {
+      "campus": "liujia",
+      "level": 5,
+      "row": 14,
+      "col": 23,
+      "size": 297
+    }
+  ],
+  "total_tiles": 1,
+  "total_bytes": 297
+}

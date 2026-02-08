@@ -1,0 +1,23 @@
+# NQSD 範例所需套件
+
+# 資料處理
+pandas>=2.0.0
+numpy>=1.24.0
+
+# 地理空間資料
+geopandas>=0.14.0
+shapely>=2.0.0
+pyproj>=3.6.0
+
+# 視覺化
+matplotlib>=3.7.0
+folium>=0.14.0
+plotly>=5.17.0
+
+# Jupyter
+jupyter>=1.0.0
+ipykernel>=6.25.0
+notebook>=7.0.0
+
+# 其他工具
+openpyxl>=3.1.0  # Excel 支援
