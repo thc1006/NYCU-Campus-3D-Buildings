@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "如果您使用本資料集，請依照以下格式引用。"
-title: "NYCU Campus Building Spatial Dataset"
+title: "NYCU Campus 3D Buildings Dataset"
 abstract: "結合國土測繪中心 3D 建築模型與 OpenStreetMap 資料的陽明交大校園建築空間資料集。包含 5 個校區（光復、博愛、陽明、六家、歸仁）共約 7,836 棟建築，提供 3D 幾何、平面圖與空間屬性，適用於土木工程、建築與 GIS 研究。A comprehensive geospatial dataset combining NLSC 3D building models and OpenStreetMap data for National Yang Ming Chiao Tung University campuses."
 authors:
   - family-names: "蔡"
@@ -9,8 +9,8 @@ authors:
     alias: "thc1006"
     affiliation: "National Yang Ming Chiao Tung University"
     # orcid: "https://orcid.org/0000-0000-0000-0000"  # 如有 ORCID 請取消註解並填入
-repository-code: "https://github.com/YOUR_USERNAME/NQSD"
-url: "https://github.com/YOUR_USERNAME/NQSD"
+repository-code: "https://github.com/thc1006/NYCU-Campus-3D-Buildings"
+url: "https://github.com/thc1006/NYCU-Campus-3D-Buildings"
 type: dataset
 keywords:
   - GIS

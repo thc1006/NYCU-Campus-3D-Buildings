@@ -1,61 +1,25 @@
-# Floor Plans - 平面圖
+# Floor Plans / 平面圖
 
-此目錄包含校園建築的平面圖和相關文件。
+**TL;DR**: NYCU floor plans and maps in PDF format with PNG previews.
 
-## 整理日期
+**簡介**: 陽明交大平面圖與地圖，PDF 格式，附 PNG 預覽。
 
-2026-02-08 - 已按類型分類
+## Files / 檔案
 
-## 目錄結構
+### Campus Maps / 校園地圖
+- yangming_campus_map.pdf - Yangming campus / 陽明校區
 
-```
-floor_plans/
-├── pdf/                         # PDF 文件
-│   ├── auditorium/              # 禮堂 (2 個)
-│   │   ├── panorama.pdf
-│   │   └── seatmap.pdf
-│   ├── buildings/               # 建築物 (2 個)
-│   │   ├── einfo_building_map.pdf
-│   │   └── eng5_exam_floorplan.pdf
-│   ├── campus/                  # 校園地圖 (2 個)
-│   │   ├── yangming_campus_map.pdf
-│   │   └── yangming_map_old.pdf
-│   └── administrative/          # 行政文件 (1 個)
-│       └── fee_standard.pdf
-│
-└── preview/                     # PNG 預覽圖
-    ├── auditorium/
-    ├── buildings/
-    └── campus/
-```
+### Buildings / 建築
+- einfo_building_map.pdf - E-Info Building / 資訊大樓
+- eng5_exam_floorplan.pdf - Engineering Building 5 exam room / 工程五館考場
 
-## 文件分類
+### Auditorium / 演藝廳
+- auditorium_seatmap.pdf - Seat map / 座位圖
+- auditorium_panorama.pdf - 360 panorama / 360 度全景
 
-### 🏛️ Auditorium (禮堂)
-- **panorama.pdf**: 禮堂全景圖 (2 頁)
-- **seatmap.pdf**: 座位配置圖 (2 頁)
+### Administrative / 行政
+- fee_standard.pdf - Fee standard / 收費標準
 
-### 🏢 Buildings (建築物)
-- **einfo_building_map.pdf**: 資訊大樓平面圖 (2 頁)
-- **eng5_exam_floorplan.pdf**: 工程五館考場配置 (1 頁)
+---
 
-### 🗺️ Campus (校園)
-- **yangming_campus_map.pdf**: 陽明校區地圖 (1 頁)
-- **yangming_map_old.pdf**: 陽明校區地圖（舊版）(2 頁)
-
-### 📋 Administrative (行政)
-- **fee_standard.pdf**: 收費標準 ⚠️ 文件損壞（54 bytes）
-
-## ⚠️ 品質問題
-
-- **fee_standard.pdf**: 文件大小異常（54 bytes），可能損壞，需要修復或替換
-
-## 預覽圖
-
-`preview/` 目錄包含所有 PDF 的 PNG 預覽圖（每頁一張），方便快速查看。
-
-## 使用建議
-
-- 需要列印時使用 PDF 原檔
-- 快速查看時使用 preview/ 的 PNG 圖片
-- 建議使用 PDF 閱讀器開啟以獲得最佳體驗
+**Source / 來源**: NYCU Official / 陽明交大官方

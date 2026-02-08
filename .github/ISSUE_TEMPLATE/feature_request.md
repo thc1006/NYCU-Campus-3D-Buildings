@@ -1,45 +1,18 @@
 ---
-name: Feature Request
-about: Suggest an idea for this project
+name: Feature Request / 功能請求
+about: Suggest a feature / 建議新功能
 title: '[FEATURE] '
 labels: enhancement
-assignees: ''
 ---
 
-## 🚀 Feature Description
-A clear and concise description of the feature you'd like to see.
+## Feature Description / 功能描述
 
-## 🎯 Use Case
-Describe the problem this feature would solve or the use case it would enable.
+Brief description / 簡短描述
 
-**Example:**
-"As a [researcher/student/developer], I want to [do something] so that [achieve goal]."
+## Use Case / 使用情境
 
-## 💡 Proposed Solution
-Describe how you envision this feature working.
+Why is this needed / 為何需要此功能
 
-## 🔄 Alternatives Considered
-Describe alternative solutions or features you've considered.
+## Proposed Solution / 建議解決方案
 
-## 📊 Impact
-Who would benefit from this feature?
-- [ ] Researchers
-- [ ] Students
-- [ ] Developers
-- [ ] Data analysts
-- [ ] Other (please specify)
-
-## 🛠️ Implementation Details
-If you have technical suggestions:
-- Data sources needed
-- Processing steps
-- Output format
-- Compatibility concerns
-
-## 📎 Additional Context
-Add any other context, mockups, or examples about the feature request.
-
-## ✅ Checklist
-- [ ] I've checked existing issues to avoid duplicates
-- [ ] I've described the use case clearly
-- [ ] I've considered how this fits with the project's goals
+How should it work / 應該如何實現

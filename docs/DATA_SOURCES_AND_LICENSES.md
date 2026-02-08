@@ -1,95 +1,33 @@
-# Data Sources and Licenses
+# Data Sources and Licenses / 資料來源與授權
 
-**Last Updated**: 2026-02-08
+**TL;DR**: Three data sources with different licenses. See `LICENSE` file for full details.
 
----
-
-## 📊 Data Sources Overview
-
-This dataset combines data from multiple authoritative sources to provide comprehensive building information for NYCU campuses.
-
-| Source | Content | Coverage | License |
-|--------|---------|----------|---------|
-| **NLSC 3D Maps** | Building heights, coordinates, structure types | ~7,836 buildings (5 campuses) | Open Government Data (Taiwan) |
-| **OpenStreetMap** | Building footprints, names (bilingual) | 319 buildings (Guangfu campus) | ODbL 1.0 |
-| **NYCU Official** | Campus maps, floor plans | 5 campuses | Fair Use (Educational) |
+**簡介**: 三個資料來源，不同授權。完整資訊請見 `LICENSE` 檔案。
 
 ---
 
-## 🗺️ 1. NLSC 3D Building Data
+## 1. NLSC (Taiwan) / 國土測繪中心
 
-### Source Information
-
-- **Provider**: National Land Surveying and Mapping Center (NLSC), Taiwan
-- **Website**: https://3dmaps.nlsc.gov.tw/
-- **Data Type**: 3D Building Models with 20 attribute fields
-
-### What NLSC Provides
-
-- ✅ **Precise Building Heights** (BUILD_H, in meters)
-- ✅ **TWD97 Coordinates** (CENT_E_97, CENT_N_97)
-- ✅ **Structure Types** (BUILD_STR: R=Reinforced Concrete, B=Brick, S=Steel)
-
-### License
-
-**Open Government Data License (Taiwan)** - Compatible with CC BY 4.0
-
-### Attribution
-
-Simply cite in README.md:
-```
-Data Source: National Land Surveying and Mapping Center (NLSC), Taiwan
-```
+**License / 授權**: Open Government Data License (CC BY 4.0 compatible)
+**Data / 資料**: 3D building models, 20 attributes
+**Required Attribution / 必須標註**: "Data Source: NLSC, Taiwan / 資料來源：國土測繪中心"
 
 ---
 
-## 🗺️ 2. OpenStreetMap Data
+## 2. OpenStreetMap / 開放街圖
 
-### Source Information
-
-- **Provider**: OpenStreetMap Contributors
-- **Website**: https://www.openstreetmap.org/
-- **Coverage**: Guangfu Campus (319 buildings, 185 with names)
-
-### What OpenStreetMap Provides
-
-- ✅ **Building Footprints** (Polygon geometries)
-- ✅ **Bilingual Names** (e.g., "工程四館 / Engineering Building 4")
-- ✅ **Building Types** and floor levels
-
-### License
-
-**Open Database License (ODbL) 1.0**
-
-**Attribution (Required)**:
-```
-© OpenStreetMap contributors
-Data available under the Open Database License
-```
-
-### Important ODbL Requirements
-
-⚠️ **You must**:
-1. Credit OpenStreetMap contributors
-2. Share derived databases under ODbL
-3. Keep data open
-
-📖 More info: https://www.openstreetmap.org/copyright
+**License / 授權**: ODbL 1.0 (REQUIRED)
+**Data / 資料**: Building footprints, names
+**Required Attribution / 必須標註**: "© OpenStreetMap contributors"
 
 ---
 
-## 🔄 Merged Dataset (This Project)
+## 3. NYCU Official / 陽明交大官方
 
-### License
-
-- **Processing Scripts**: MIT License
-- **Documentation**: CC BY 4.0
-- **Merged Data**: CC BY 4.0 + ODbL Attribution (contains OSM data)
-
-### How to Cite
-
-See `CITATION.cff` for standard citation format.
+**Usage / 用途**: Fair use for research
+**Data / 資料**: Campus maps, floor plans
+**Attribution / 標註**: "Courtesy of NYCU / 由陽明交大提供"
 
 ---
 
-**For full details**, see the complete license documentation in `LICENSE` file.
+**Full Details / 完整資訊**: See `../LICENSE`

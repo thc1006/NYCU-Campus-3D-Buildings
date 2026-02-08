@@ -1,33 +1,41 @@
-# NYCU 3D Building Models
+# 3D Models / 3D 模型
 
-Sample 3D models of NYCU buildings in multiple formats.
+**TL;DR**: Sample 3D building model in GLB and USDZ formats with preview images.
 
-## 📦 Available Models
+**簡介**: 範例 3D 建築模型，GLB 和 USDZ 格式，附預覽圖。
 
-### Engineering Building IV (工程四館)
+---
 
-**Files**:
-- `NCTU_Engineering_Building_IV.glb` - glTF Binary (Universal)
-- `NCTU_Engineering_Building_IV.usdz` - Apple AR format
+## Files / 檔案
 
-**Previews**:
-- `previews/NCTU_Eng4_preview_front.webp`
-- `previews/NCTU_Eng4_preview_large.webp`
-- `previews/NCTU_Eng4_preview_side.webp`
-- `previews/NCTU_Eng4_preview_top.jpg`
+### Model Files / 模型檔案
+- **NCTU_Engineering_Building_IV.glb** (9.7 MB)
+  - Format: glTF Binary / 格式：glTF 二進位
+  - Usage: Web viewers, Blender / 用途：網頁檢視器、Blender
 
-## 🔧 Usage
+- **NCTU_Engineering_Building_IV.usdz** (10.2 MB)
+  - Format: Universal Scene Description / 格式：通用場景描述
+  - Usage: iOS AR / 用途：iOS AR
 
-### GLB Format
-Supported by: Three.js, Babylon.js, Blender, Unity, Unreal Engine
+### Preview Images / 預覽圖
+- NCTU_Eng4_preview_front.webp (Front view / 正面視圖)
+- NCTU_Eng4_preview_side.webp (Side view / 側面視圖)
+- NCTU_Eng4_preview_top.jpg (Top view / 俯視圖)
+- NCTU_Eng4_preview_large.webp (Large view / 大圖)
 
-### USDZ Format
-For iOS AR Quick Look - tap on iPhone/iPad to view in AR
+---
 
-## 📝 Data Sources
+## Usage / 使用方式
 
-- **3D Model**: Sample demonstration
-- **Building Data**: NLSC (height: 40.5 m)
-- **Footprint**: OpenStreetMap
+### Web Viewer / 網頁檢視器
+```html
+<model-viewer src="NCTU_Engineering_Building_IV.glb"></model-viewer>
+```
 
-**Last Updated**: 2026-02-08
+### iOS AR / iOS AR
+Download USDZ file and open in Safari / 下載 USDZ 檔案並在 Safari 中開啟
+
+---
+
+**Source / 來源**: NLSC 3D Building Models / 國土測繪中心 3D 建築模型
+**License / 授權**: Open Government Data License / 政府資料開放授權

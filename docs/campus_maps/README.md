@@ -1,37 +1,35 @@
-# NYCU Campus Maps Collection
+# Campus Maps / 校園地圖
 
-Official campus maps for all five NYCU campuses.
+**TL;DR**: Campus maps for 5 NYCU campuses in PDF/JPG formats.
 
-## 📁 Maps by Campus
+**簡介**: 陽明交大 5 校區地圖，PDF/JPG 格式。
 
-### Guangfu Campus (光復校區)
-- `guangfu/NYCU_Guangfu_campus_map.pdf` (22 MB)
-- `guangfu/NYCU_Guangfu_campus_map.jpg` (118 KB)
+---
 
-### Boai Campus (博愛校區)
-- `boai/NYCU_Boai_campus_map.pdf` (8 MB)
-- `boai/NYCU_Boai_campus_map.jpg` (116 KB)
+## Maps by Campus / 各校區地圖
 
-### Yangming Campus (陽明校區)
-- `yangming/NYCU_Yangming_campus_map.pdf` (12 MB)
-- `yangming/NYCU_Yangming_campus_map.jpg` (144 KB)
-- `yangming/NYCU_Yangming_campus_map_IPU.pdf` (169 KB)
+### Guangfu Campus / 光復校區
+- NYCU_Guangfu_campus_map.pdf
+- NYCU_Guangfu_campus_map.jpg
 
-### Liujia Campus (六家校區)
-- `liujia/NYCU_Liujia_campus_map.pdf` (7.8 MB)
+### Boai Campus / 博愛校區
+- NYCU_Boai_campus_map.pdf
+- NYCU_Boai_campus_map.jpg
 
-### Gueiren Campus (歸仁校區)
-- `gueiren/NYCU_Gueiren_campus_map.jpg` (106 KB)
+### Yangming Campus / 陽明校區
+- NYCU_Yangming_campus_map.pdf
+- NYCU_Yangming_campus_map.jpg
+- NYCU_Yangming_campus_map_IPU.pdf (IPU Building / IPU 大樓)
 
-### General Documents
-- `general/NYCU_GA_document.pdf` - General Affairs Office
-- `general/NYCU_GA_facilities_map.pdf` - Facilities map
-- `general/NYCU_CS_dept_campus_map.pdf` - CS Department map
+### Liujia Campus / 六家校區
+- NYCU_Liujia_campus_map.pdf
 
-## 📝 Attribution
+### General / 通用
+- NYCU_CS_dept_campus_map.pdf (CS Department / 資工系)
+- NYCU_GA_facilities_map.pdf (General Affairs / 總務處)
+- NYCU_GA_document.pdf (GA Documentation / 總務處文件)
 
-```
-Campus maps courtesy of National Yang Ming Chiao Tung University
-```
+---
 
-**Last Updated**: 2026-02-08
+**Source / 來源**: NYCU Official / 陽明交大官方
+**Usage / 用途**: Educational and research purposes / 教育與研究用途

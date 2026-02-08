@@ -1,59 +1,41 @@
-# NQSD 範例與教學
+# Examples / 範例
 
-本目錄包含使用 NYCU 校園建築資料集的 Jupyter Notebook 範例。
+**TL;DR**: Three Jupyter notebooks demonstrating dataset usage: basic operations, data analysis, and visualization.
 
-## 📚 可用範例
+**簡介**: 三個 Jupyter 筆記本展示資料集使用：基本操作、資料分析、視覺化。
 
-### 1. 基礎使用 (`01_basic_usage.ipynb`)
-- 讀取 GeoJSON 資料
-- 基本資料探索
-- 過濾特定校區建築
-- 簡單統計分析
-- 匯出為 CSV
+---
 
-### 2. 資料分析 (`02_data_analysis.ipynb`)
-- 建築高度分佈分析
-- 校區比較分析
-- 結構類型統計
-- 空間密度分析
+## Notebooks / 筆記本
 
-### 3. 視覺化 (`03_visualization.ipynb`)
-- 2D 地圖視覺化（Folium）
-- 建築高度熱力圖
-- 互動式圖表
-- 匯出為 HTML
+### 01_basic_usage.ipynb
+**Content / 內容**: Load, filter, export / 載入、過濾、匯出
+**Topics / 主題**: GeoDataFrame basics, attribute queries / GeoDataFrame 基礎、屬性查詢
 
-## 🚀 快速開始
+### 02_data_analysis.ipynb
+**Content / 內容**: Statistical analysis / 統計分析
+**Topics / 主題**: Height distribution, structure types / 高度分佈、結構類型
 
-### 安裝依賴
+### 03_visualization.ipynb
+**Content / 內容**: Interactive maps / 互動式地圖
+**Topics / 主題**: Folium maps, heatmaps, 3D visualization / Folium 地圖、熱力圖、3D 視覺化
+
+---
+
+## Requirements / 環境需求
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 執行範例
-
-```bash
-jupyter notebook
-# 開啟瀏覽器後選擇 .ipynb 檔案
-```
-
-## 📊 範例資料
-
-`sample_data/` 目錄包含精簡版範例資料：
-- `sample_buildings.geojson` - 100 棟建築範例
-- `sample_buildings.csv` - CSV 格式
-
-完整資料集請參考：`../data/output/latest/`
-
-## 📝 授權
-
-範例程式碼採用 **MIT License**
-
-資料來源：
-- NLSC 3D Building Data (Open Government Data)
-- OpenStreetMap (© OSM contributors, ODbL)
+**Dependencies / 依賴套件**: pandas, geopandas, folium, plotly, jupyter
 
 ---
 
-**最後更新**: 2026-02-08
+## Usage / 使用方式
+
+```bash
+jupyter notebook
+```
+
+Open desired notebook and run cells / 開啟所需筆記本並執行 cells

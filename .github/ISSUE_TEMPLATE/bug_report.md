@@ -1,42 +1,29 @@
 ---
-name: Bug Report
-about: Create a report to help us improve
+name: Bug Report / 錯誤回報
+about: Report a bug / 回報錯誤
 title: '[BUG] '
 labels: bug
-assignees: ''
 ---
 
-## 🐛 Bug Description
-A clear and concise description of what the bug is.
+## Description / 描述
 
-## 📍 Location
-- **Script/File**: (e.g., `scripts/03_parse_nlsc_tiles.py`)
-- **Line Number**: (if applicable)
-- **Campus/Dataset**: (e.g., Guangfu campus, NLSC 112_O layer)
+Brief description / 簡短描述
 
-## 🔄 Steps to Reproduce
-1. Go to '...'
-2. Run command '...'
-3. See error
+## Steps to Reproduce / 重現步驟
 
-## ✅ Expected Behavior
-What you expected to happen.
+1. Step 1 / 步驟 1
+2. Step 2 / 步驟 2
 
-## ❌ Actual Behavior
-What actually happened.
+## Expected Behavior / 預期行為
 
-## 📋 Error Message
-```
-Paste error message here
-```
+What should happen / 應該發生什麼
 
-## 🖥️ Environment
-- **OS**: (e.g., Windows 10, Ubuntu 22.04)
-- **Python Version**: (e.g., 3.9.7)
-- **Dependencies**: (paste `pip list` output if relevant)
+## Actual Behavior / 實際行為
 
-## 📎 Additional Context
-Add any other context, screenshots, or data samples that help explain the problem.
+What actually happened / 實際發生什麼
 
-## 🔗 Related Issues
-Link to related issues if any.
+## Environment / 環境
+
+- OS / 作業系統:
+- Python version / Python 版本:
+- Dependencies / 依賴套件:

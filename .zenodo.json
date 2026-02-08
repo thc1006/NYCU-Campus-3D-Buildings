@@ -1,5 +1,5 @@
 {
-  "title": "NYCU Campus Building Spatial Dataset",
+  "title": "NYCU Campus 3D Buildings Dataset",
   "description": "結合國土測繪中心 3D 建築模型與 OpenStreetMap 資料的陽明交大校園建築空間資料集。涵蓋 5 個校區：光復（6,181 棟）、博愛（1,023 棟）、陽明（446 棟）、六家（169 棟）、歸仁（17 棟），共約 7,836 棟建築，包含 20 個屬性欄位（高度、結構類型、TWD97 座標等）。適用於土木工程、建築與 GIS 研究。A comprehensive geospatial dataset combining NLSC 3D building models and OpenStreetMap data for National Yang Ming Chiao Tung University campuses. Covers 5 campuses with ~7,836 buildings and 20 attribute fields.",
   "creators": [
     {
@@ -74,7 +74,7 @@
   ],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/YOUR_USERNAME/NQSD",
+      "identifier": "https://github.com/thc1006/NYCU-Campus-3D-Buildings",
       "relation": "isSupplementTo",
       "scheme": "url",
       "resource_type": "software"

@@ -1,54 +1,27 @@
 ---
-name: Data Quality Issue
-about: Report incorrect or missing data
+name: Data Quality Issue / 資料品質問題
+about: Report data inaccuracy / 回報資料不準確
 title: '[DATA] '
 labels: data-quality
-assignees: ''
 ---
 
-## 📍 Data Location
-- **Campus**: (e.g., Guangfu, Boai, Yangming, Liujia, Gueiren)
-- **File**: (e.g., `data/processed/buildings/by_campus/guangfu/`)
-- **Building ID**: (if known, e.g., `BUILD_ID: 2BUEV72Q94`)
+## Issue Description / 問題描述
 
-## ❌ Issue Type
-- [ ] Incorrect attribute (height, coordinates, etc.)
-- [ ] Missing building
-- [ ] Duplicate building
-- [ ] Outdated information
-- [ ] Other (please specify)
+Brief description / 簡短描述
 
-## 📝 Issue Details
+## Location / 位置
 
-### Current Data
-```
-What the data currently shows
-(e.g., Building height: 40.5 m)
-```
+- Campus / 校區:
+- Building / 建築:
+- Coordinates / 座標 (if applicable / 如適用):
 
-### Expected Data
-```
-What it should be
-(e.g., Building height: 42.3 m)
-```
+## Data Problem / 資料問題
 
-### Evidence
-- **Source**: (e.g., campus map, official document, field measurement)
-- **Date**: (when was this verified?)
-- **Attachments**: (photos, documents, screenshots)
+- Incorrect attribute / 錯誤屬性:
+- Missing data / 缺失資料:
+- Geometry error / 幾何錯誤:
+- Other / 其他:
 
-## 🌍 Location Verification
-- **Coordinates**: (if applicable)
-- **Address**: (if known)
-- **Nearby Landmarks**:
+## Evidence / 證據
 
-## 📊 Impact
-- [ ] Critical (affects many buildings or core functionality)
-- [ ] Moderate (affects specific use cases)
-- [ ] Minor (cosmetic or edge case)
-
-## 🔗 Related Data
-Are other buildings affected by the same issue?
-
-## 📎 Additional Context
-Any other information that would help us verify and fix this issue.
+Photos, links, or other evidence / 照片、連結或其他證據
