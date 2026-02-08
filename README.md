@@ -1,6 +1,6 @@
-[![DOI](https://zenodo.org/badge/1152618335.svg)](https://doi.org/10.5281/zenodo.18522926)
-
 # NYCU Campus 3D Buildings Dataset
+
+[![DOI](https://zenodo.org/badge/1152618335.svg)](https://doi.org/10.5281/zenodo.18522926)
 
 Comprehensive 3D building dataset for 5 NYCU campuses (~7,836 buildings) combining NLSC 3D models and OpenStreetMap data.
 
